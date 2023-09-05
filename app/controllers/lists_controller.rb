@@ -14,8 +14,8 @@ class ListsController < ApplicationController
     redirect_to '/top'
   end
 
-
   def index
+   @lists = List.all
   end
 
   def show
@@ -23,7 +23,7 @@ class ListsController < ApplicationController
 
   def edit
   end
-  
+
   private
   #ストロングパラメータ(セキュリティのためつける。privateから書く。最後のendの上に置く)
   def list_params #モデル名_paramsと名付ける
