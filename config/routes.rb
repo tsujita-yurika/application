@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # patch 'lists/:id' => 'lists#update', as: 'update_list'
   
   resources :lists
+  delete 'lists/:id' => 'lists#destroy', as:'desroy_list'
   end
-  
