@@ -10,8 +10,9 @@ class ListsController < ApplicationController
     list = List.new(list_params)
     # 3.データをデータベースに保存するsaveメソッド実行
     list.save
-    #4. トップ画面へリダイレクト
-    redirect_to '/top'
+    #4. トップ画面へリダイレクト→詳細画面へリダイレクトに変更
+    # redirect_to '/top'
+    redirect_to list_path(list.id)
   end
 
   def index
