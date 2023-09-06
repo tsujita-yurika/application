@@ -7,10 +7,10 @@ class ListsController < ApplicationController
   def create
       @list = List.new(list_params)
     if @list.save
+      flash[:notice] = "投稿に成功しました。"
       redirect_to list_path(@list.id)
     else
-      @lists = List.all
-      render :index
+      render :new
     end
   end
 
