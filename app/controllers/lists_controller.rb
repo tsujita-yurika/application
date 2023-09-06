@@ -10,6 +10,7 @@ class ListsController < ApplicationController
       redirect_to list_path(@list.id)
     else
       render :new
+    end
   end
 
   def index
@@ -41,7 +42,7 @@ class ListsController < ApplicationController
   def list_params #モデル名_paramsと名付ける
     params.require(:list).permit(:title, :body)
   end
-  
+
   def list_params
     params.require(:list).permit(:title, :body, :image)
   end
