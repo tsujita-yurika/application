@@ -41,9 +41,6 @@ class ListsController < ApplicationController
 
   private
   #ストロングパラメータ(セキュリティのためつける。privateから書く。最後のendの上に置く)
-  def list_params #モデル名_paramsと名付ける
-    params.require(:list).permit(:title, :body)
-  end
 
   def list_params
     params.require(:list).permit(:title, :body, :image)
