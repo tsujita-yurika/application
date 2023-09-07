@@ -14,17 +14,17 @@
 <% end %>
 </div>
 
-<!--<h1>投稿一覧</h1>-->
-<!--<%# @lists.each do |list| %>-->
+<h1>投稿一覧</h1>
+<% @lists.each do |list| %>
 
-<!--    <p>タイトル</p>-->
-<!--    <span>-->
-        <!-- <span><%#= list.title %></span> を削除して、以下コードに変更 -->
-        <%#= link_to list.title, "/lists/#{list.id}" %>
-<!--        <%#= link_to list.title,list_path(list.id) %> <!--見やすい-->
-<!--    </span>-->
+    <p>タイトル</p>
+    <span>
+         <span><#= list.title %></span>
+        <%= link_to list.title, "/lists/#{list.id}" %>
+        <%= link_to list.title,list_path(list.id) %>
+        </span>
 
-<!--    <p>画像</p>-->
-<!--    <%#= image_tag list.image, size: "200x200" %>-->
+    <p>画像</p>
+    <%= image_tag list.image, size: "200x200" %>
 
-<!--<%# end %>-->
+<% end %>
